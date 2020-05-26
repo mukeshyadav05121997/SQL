@@ -1,3 +1,10 @@
+constrainst::
+            1.primary key
+            2.foreign key
+            3.unique
+            4.check:means limitaion like check(age>10);
+
+
 DDL:which is used for column
  1.create:create table tablename(columnname);
  2.alter:alter table tablename add column columnname returntype;
@@ -5,6 +12,16 @@ DDL:which is used for column
  @@@ alter on primary key
    1.alter table tablename add primary key (column name);
    1.alter table tablename drop primar key;
+ 4.Modify:It is used to change the datatype of column; ex:alter table tablename modify columnname <datatype>
  
- 4.Rename:alter table tablename change 'old column' 'new column' datatype;
- 5.Truncate:truncate is used to remove the feild; truncate table tablename;
+ 5.alter table tablename
+ add constraints fk_petowner
+ foreign key(owner_id) refrences <people/tablename> (id);
+ 
+ 6.alter table tablename
+ add constraints u_mail unique(email/columnname);
+ 
+ 
+ 5.Rename:alter table tablename change 'old column' 'new column' datatype;
+ 6.Truncate:truncate is used to remove the feild; truncate table tablename;
+
