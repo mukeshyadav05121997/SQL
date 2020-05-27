@@ -1,0 +1,23 @@
+SELECT
+   1.Select * from <Tablename>;
+   2.select c1,c2 from <Tablename>
+
+WHERE
+   1.Select * from <tablename> where <columnname>='varchar';
+   2.Select * from <tablename> where <columnname>='varchar' AND city='berlin';
+   3.Select * from <tablename> where <columnname>='varchar' OR city='berlin';
+
+NULL
+   1.Select * from <tablename> where <columnname> IS NULL  --/* GIVE ALL THE ROW THAT HAVE NULL VALUE */
+   2.SELECT  * FROM Customers
+     where CustomerID IS NOT NULL;  
+     
+IN
+  1.It is just like OR whatever will be in (1,2,3) it will select only that 
+  2.Select * from <tablename> where <columnname> IN ('VARCHAR','BERLIN'); /* IT WILL SELECT ONLY THAT ROW WHICH  HAVE VARCHAR AND BERLIN
+  3.Select * from <tablename> where <columnname> IN ('VARCHAR','BERLIN');/*  OTHER THAN VARCHAR AND BERLIN
+  
+Between
+  1.Select * from <tablename> where <columnname> BETWEEN x AND y;
+  
+   
