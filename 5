@@ -15,9 +15,24 @@ NULL
 IN
   1.It is just like OR whatever will be in (1,2,3) it will select only that 
   2.Select * from <tablename> where <columnname> IN ('VARCHAR','BERLIN'); /* IT WILL SELECT ONLY THAT ROW WHICH  HAVE VARCHAR AND BERLIN
-  3.Select * from <tablename> where <columnname> IN ('VARCHAR','BERLIN');/*  OTHER THAN VARCHAR AND BERLIN
+  3.Select * from <tablename> where <columnname>  NOT IN ('VARCHAR','BERLIN');/*  OTHER THAN VARCHAR AND BERLIN
   
 Between
   1.Select * from <tablename> where <columnname> BETWEEN x AND y;
+  
+Like
+  1.select * from <tablename> where <columnname> LIKE 'a%'; /* SELECT ALL THE NAME  STARTING WITH A */
+  2.select * from <tablename> where <columnname> LIKE '%a'; /* SELECT ALL THE NAME  ENDING WITH A */
+  3.select * from <tablename> where <columnname> LIKE '%a%'; /* SELECT ALL THE NAME  WHERE IS BETWEEN THE WORD/
+  4.select * from <tablename> where <columnname> LIKE '_a_'; /* SELECT ALL THE NAME  EITHER SIDE IS ONE ONE CHARACTER */
+  
+ORDER BY
+  1.select  * from <tablename> ORDER BY price ASC/DESC ;
+ 
+DISTINCT
+  1.select DISTINCT <Columnname> from <tablename>;  /* no dublicate value
+
+LIMIT and OFFSET:::It is used to select particular row LIMIT 5 MEANS TOP 5 AND OFFSET 5 MEANS NEXT 5
+  1.select <columnname> from <tablename>  limit 5 OFFSET 5;
   
    
