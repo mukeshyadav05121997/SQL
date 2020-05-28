@@ -1,0 +1,18 @@
+JOIN:it is used to fetch data from multiple table using single statement
+     There must be relation between table
+     
+Types of joins:
+    1.inner join:its retreive data from both the table only which is matching in both table;
+    
+                 SELECT Customers.CustomerName,Categories.CategoryName Customers
+                 INNER JOIN Categories on Customers.CustomerID=Categories.CategoryID;
+                 
+                 Select C.CustomerName,Cat.Categoryname Customers C
+                 INNER JOIN Categories cat ON C.CustomerID=Cat.CategoryID
+                 ORDER BY c.CustomerID;
+                 
+    2.left join:return the left table and only the matching value from right table;
+                
+                
+    3.right join:return the right table and only the matching value  from left table;
+    4.outer join:return the whole value from both the table
