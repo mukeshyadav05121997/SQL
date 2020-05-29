@@ -4,9 +4,98 @@ Normalization is process of efficiently organizing data in database;
   2.To store only related data
   
   STUDENT      YEAR         CLASS        TEACHER
-  
+                           
   MUKESH       9           GEOGRAPHY     MR.GREEN
   RAKESH       9           GEOGRAPHY     MR.GREEN
   BENET        8           PHYSICS       MR.EINSTEIN
   CHARLIE      9           GEOGRAPHY     MR.GREEN
   BOND         10          MUSIC         ARIJIT SINGH
+  
+ * GEOGRAPHY IS REPEATING  MEANS REDUDANCY IS THERE
+ 
+ ______BENEFIT OF NORMALIZATION________________
+    1.Reduce storage space
+    2.Reduce delete,update,insert anamolies
+    3.improve query performance
+    
+ _______LEVEL OF NORMALISATION____________
+   1.1st normal form(1NF)
+   2.2nd Normal form(2NF)
+   3.3rd Normal form(3NF)
+   4.Boyce and Coded form(bcnf)
+ ================================================================================================================================  
+                                      #### 1ST NORMAL FORM ####
+  table are in 1nf if :
+    1.No repeated row of data
+    2.column only contain single value
+    3.table must have primary key
+    
+    example::
+    
+    STUDENT      YEAR          CLASS
+   
+    DOWSON       11           MATH          //REPEATING VIOLATION OF 1NF
+    TAYLOR       10           HISTORY
+    DOWSON       11           MATH          //REPEATING VIOLATION OF 1NF
+    COX          8            ENGLISH,CHEMISTRY     //MORE THAN ONE VALUE THAT IS ALSO VIOLATING 1NF
+    MARSH        7            MATH,HISTORY,BIOLOGY
+    
+    SO ANSWER IS :
+    
+    STUDENT      YEAR         CLASS
+    
+    DOWSON       11           MATH          
+    TAYLOR       10           HISTORY          
+    COX          8            ENGLISH,
+    COX          8            CHEMISTRY 
+    MARSH        7            MATH
+    MARSH        7            HISTORY
+    MARSH        7            BIOLOGY
+   
+   *YEAR+CLASS WILL ACT LIKE PRIMARY KEY
+   
+   =====================================================================================================================================
+                                       #### 2nd Normal form ####
+                                       
+    table in 2nd normal form if:
+     1.They conform to 1NF
+     2.all non-key attributes are fully functional dependent on the primary key
+     
+     STUDENT           SUBJECT           GRADE             AGE
+    WILLIAM           MATH               A                 15
+    WILLIAM           ENGLISH            B                 15
+    JAMES             MATH               C                 16
+    BROWN             CHEMISTY           A                 14
+    THOMAS            GEOGRAPHY          B                 14
+   
+   * AGE IS NOT DEPENDENT ON PRIMARY KEY THAT IS STUDENT+SUBJECT
+   TO MAKE 2NF
+    STUDENT           SUBJECT           GRADE             
+    WILLIAM           MATH               A                 
+    WILLIAM           ENGLISH            B                 
+    JAMES             MATH               C                 
+    BROWN             CHEMISTY           A                 
+    THOMAS            GEOGRAPHY          B   
+    
+    AND
+    
+    STUDENT               AGE
+    WILLIAM               15
+    WILLIAM               15
+    JAMES                 16
+    BROWN                 14
+    THOMAS                14
+   
+   
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
