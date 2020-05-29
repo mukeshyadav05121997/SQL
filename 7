@@ -12,7 +12,29 @@ Types of joins:
                  ORDER BY c.CustomerID;
                  
     2.left join:return the left table and only the matching value from right table;
+                  SELECT Customers.CustomerName,Categories.CategoryName Customers
+                 LEFT JOIN Categories on Customers.CustomerID=Categories.CategoryID;
+                 
+                 Select C.CustomerName,Cat.Categoryname Customers C
+                 LEFT JOIN Categories cat ON C.CustomerID=Cat.CategoryID
+                 ORDER BY c.CustomerID LIMIT 10;
                 
                 
     3.right join:return the right table and only the matching value  from left table;
+                   SELECT Customers.CustomerName,Categories.CategoryName Customers
+                 RIGHT JOIN Categories on Customers.CustomerID=Categories.CategoryID;
+                 
+                 Select C.CustomerName,Cat.Categoryname Customers C
+                 RIGHT JOIN Categories cat ON C.CustomerID=Cat.CategoryID
+                 ORDER BY c.CustomerID LIMIT 10;
+    
+    
     4.outer join:return the whole value from both the table
+    NOT IN MYSQL
+    
+    ~~~~~~~Joining more than 2 table~~~~~~~~~~
+                 Select C.CustomerName,Cat.Categoryname Customers C
+                 JOIN Categories cat ON C.CustomerID=Cat.CategoryID
+                 JOIN <THIRDTABLE>.X ON C.CustomerID=x.<column>
+                 
+    
