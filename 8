@@ -6,7 +6,7 @@ Normalization is process of efficiently organizing data in database;
   STUDENT      YEAR         CLASS        TEACHER
                            
   MUKESH       9           GEOGRAPHY     MR.GREEN
-  RAKESH       9           GEOGRAPHY     MR.GREEN
+  MUKESH       9           GEOGRAPHY     MR.GREEN
   BENET        8           PHYSICS       MR.EINSTEIN
   CHARLIE      9           GEOGRAPHY     MR.GREEN
   BOND         10          MUSIC         ARIJIT SINGH
@@ -85,7 +85,39 @@ Normalization is process of efficiently organizing data in database;
     JAMES                 16
     BROWN                 14
     THOMAS                14
-   
+    
+    ===============================================================================================================================
+    ################### 3 Normal form ####################
+    
+       table are belong to 3rd normal form if :
+       1.They confirm to 2nf
+       2.every column that is not primary key is only dependent on the whole of the primary key;
+       
+       subject        year         pupil        date of birth of pupil
+       
+       Math          2015          MATHEW       1999-3-21
+       Physics       2015          willian      1988-4-17
+       chemistry     2016          robert       1974-3-25
+       
+       to make it 3nf
+       
+       subject        year         pupil       
+       
+       Math          2015          MATHEW       
+       Physics       2015          willian     
+       chemistry     2016          robert    
+       
+       and
+       
+       pupil        date of birth of pupil
+       
+       MATHEW       1999-3-21
+       willian      1988-4-17
+       robert       1974-3-25
+       
+       =============================================================================================================================
+       ### boyce-coded form ###
+       A relation is in BCNF, if and only if, every determinant is a Form (BCNF) candidate key
    
     
     
