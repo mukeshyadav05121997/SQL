@@ -27,6 +27,26 @@ Types of joins:
                  Select C.CustomerName,Cat.Categoryname Customers C
                  RIGHT JOIN Categories cat ON C.CustomerID=Cat.CategoryID
                  ORDER BY c.CustomerID LIMIT 10;
+    4.Self Join:A self JOIN occurs when a table takes a 'selfie'.
+                A self JOIN is a regular join but the table is joined with itself.
+                This can be useful when modeling hierarchies.
+                They are also useful for comparisons within a table.
+                
+                SELECT column-names
+                FROM table-name T1 JOIN table-name T2
+                WHERE condition
+                
+                
+                
+    5.cross join:The SQL CROSS JOIN produces a result set which is the number of rows in the first table
+               multiplied by the number of rows in the second table if no WHERE clause is used along with CROSS JOIN.
+              This kind of result is called as Cartesian Product.
+
+              If WHERE clause is used with CROSS JOIN, it functions like an INNER JOIN.
+              
+              SELECT * FROM table1 CROSS JOIN table2;
+              
+             
     
     
     4.outer join:return the whole value from both the table
