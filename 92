@@ -5,6 +5,11 @@ Types of subqueries:
           1.Non-Correlated
             ~Innerquery can be independent of outerquery
             ~innerquery is execured first then the outer query
+           where:
+            SELECT CategoryID,CategoryName from Categories where CategoryID IN(Select CategoryID from Categories where Description like 's%');
+           From:
+           SELECT max(Sup) from(select Count(SupplierID) as Sup from Products);
+           
           2.Correlated
             ~Innerquery can not run independent
-            ~Innerquery run paralled to outer query  j
+            ~Innerquery run paralled to outer query 
