@@ -13,3 +13,4 @@ Types of subqueries:
           2.Correlated
             ~Innerquery can not run independent
             ~Innerquery run paralled to outer query 
+           SELECT  OrderID,CustomerID,(SELECT EmployeeID from Orders where OrderID=o.OrderID) as emp from Orders o order by CustomerID
