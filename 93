@@ -1,0 +1,12 @@
+Function:Function are stored Program which can passed the parameter and return the value
+example aggregation function  max(columnname);
+@@@ 1.Concatenation
+ select concat(c1,c2) as <newcolumnname>from <tablename>;
+@@@ 2.substring
+ select substring('example',3,3) as sub;
+ select substring('example',3,3) as sub from <tablename>
+@@@ 3.Lower and upper
+
+ select upper(<columnname>) as newcolumn from <tablename>
+ select upper(<columnname>) as newcolumn from <tablename>
+   
