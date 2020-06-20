@@ -1,0 +1,28 @@
+Aggregation::Perform calculation on data and return one result;
+             Allway use GROUP BY to make result one or more  & always use HAVING along with group;
+             Aggregate function are 
+              1.count:It is used to count number of rows;
+               example:: select count(<columnname>) from <tablename>
+                         select count(<columnname>) from <tablename> where coulumnname ='';
+              2.sum:
+                         select sum(<columnname>) from <tablename> 
+              3.max
+                         select max(Price) from Products;
+              4.min
+                         select min(Price) from Products;
+              5.avg
+                         select avg(Price) from Products;
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+ GROUP BY and HAVING use
+   
+    **group by** 
+     select count(<columnname>) from <tablename> //This statement gives total number of rows
+      for for any particuler column then use group by
+      
+       select count(<columnname>) from <tablename> group by <columnname>
+       
+     **having**
+     we can not use where with group by hence we are using having 
+      example:  select count(<columnname>) from <tablename> group by <columnname> having id >5;
