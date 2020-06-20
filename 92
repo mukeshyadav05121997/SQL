@@ -1,0 +1,10 @@
+Subqueries:Subqueries are query nested inside other query
+          example.SELECT CustomerID,customerName from Customers where PostalCode IN(select PostalCode from customers where customerID>5)
+          subquery can be in where clause or from clause
+Types of subqueries:
+          1.Non-Correlated
+            ~Innerquery can be independent of outerquery
+            ~innerquery is execured first then the outer query
+          2.Correlated
+            ~Innerquery can not run independent
+            ~Innerquery run paralled to outer query  j
