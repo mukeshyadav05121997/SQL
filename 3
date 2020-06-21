@@ -2,7 +2,13 @@
                        ::constrainst::
 SQL constraints are used to specify rules for the data in a table
             1.primary key
+               ALTER TABLE Persons ADD PRIMARY KEY (ID);
             2.foreign key
+            IN MYSQL
+              Foreign key(personID) reference person(PersonID)
+            SQLSERVER/ORACLE
+              PersonID int FOREIGN KEY REFERENCES Persons(PersonID)
+);
             3.unique
             4.check:means limitaion like check(age>10);
             5.Not NULL
