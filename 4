@@ -12,4 +12,52 @@ DML(Data Manipulation language):use to insert,update and delete the data from ta
           where id=1;
  3.delete:delete from <tablename>
           where id=1;
+==========================================================================================================================================
+EXIST OPERATOR
 
+The EXISTS operator is used to test for the existence of any record in a subquery.
+
+The EXISTS operator returns true if the subquery returns one or more records.
+SELECT SupplierName
+FROM Suppliers WHERE EXISTS 
+(SELECT ProductName FROM Products WHERE Products.SupplierID = Suppliers.supplierID AND Price = 22);
+
+    SQL ANY
+    The ANY and ALL operators are used with a WHERE or HAVING clause.
+    The ANY operator returns true if any of the subquery values meet the condition.
+    The ALL operator returns true if all of the subquery values meet the condition.
+    
+    SELECT ProductName FROM Products WHERE
+    ProductID = ANY (SELECT ProductID FROM OrderDetails WHERE Quantity = 10);
+    
+    ALL Operators
+    The following SQL statement returns TRUE and lists the product names 
+    if ALL the records in the OrderDetails table has quantity = 10 (so, this example will return FALSE, 
+    because not ALL records in the OrderDetails table has quantity = 10):
+    
+    SELECT ProductName FROM Products WHERE
+    ProductID = ALL (SELECT ProductID FROM OrderDetails WHERE Quantity = 10);
+    
+    ===================================================================================================================================
+    SELECT INTO STATEMENT
+    The SELECT INTO statement copies data from one table into a new table.
+  
+  The following SQL statement uses the IN clause to copy the table into a new table in another database:
+      SELECT * INTO CustomersBackup2017 IN 'Backup.mdb'
+     FROM Customers;
+     
+     SELECT * INTO CustomersBackup2017
+     FROM Customers;
+     ==================================================================================================================================
+     INSERT INTO SELECT Statement
+    The INSERT INTO SELECT statement copies data from one table and inserts it into another table.
+
+     INSERT INTO SELECT requires that data types in source and target tables match
+     The existing records in the target table are unaffected
+     
+     The following SQL statement copies "Suppliers" into "Customers" (the columns that are not filled with data, will contain NULL):
+
+     Example
+     INSERT INTO Customers (CustomerName, City, Country)
+     SELECT SupplierName, City, Country FROM Suppliers;
+    
