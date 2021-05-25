@@ -1,0 +1,13 @@
+string is good practice of modifying any thing.
+ex
+create table cats
+(Name varchar(20),
+ Age int
+);
+Now what if i want to change coulumn name or table,we need to create other table so string will help us to remove this repetation;
+1.CONCATENATION
+select CONCAT(author_fname,' ',author_lname) as Fullname from books;
+2.SUBSTRING
+select SUBSTRING('Hello World',1,5) as Filter;
+select CONCAT(SUBSTRING('Hello',1,4),'...') as Prac ;
+3.
