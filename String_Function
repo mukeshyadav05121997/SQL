@@ -10,4 +10,7 @@ select CONCAT(author_fname,' ',author_lname) as Fullname from books;
 2.SUBSTRING
 select SUBSTRING('Hello World',1,5) as Filter;
 select CONCAT(SUBSTRING('Hello',1,4),'...') as Prac ;
-3.
+3.DateTime
+SELECT DATEDIFF(NOW(), birthdate) FROM people;
+
+SELECT birthdt, DATE_ADD(birthdt, INTERVAL 1 MONTH) FROM people;
